@@ -1,36 +1,31 @@
 package com.example.mvvmsample.model;
 
+import com.example.mvvmsample.database.DetailsEntity;
+
+import java.util.List;
+
 /**
  * Created by ketan on 29/12/18.
  */
 
 public class DataModel {
 
-    private int arg1;
-    private int arg2;
-    private String firstString;
+    private int firstName;
+    private int secondName;
 
-    public int getArg1() {
-        return arg1;
+    public int getFirstName() {
+        return firstName;
     }
 
-    public void setArg1(int arg1) {
-        this.arg1 = arg1;
+    public void setFirstName(int firstName) {
+        this.firstName = firstName;
     }
 
-    public int getArg2() {
-        return arg2;
+    public int getSecondName() {
+        return secondName;
     }
 
-    public void setArg2(int arg2) {
-        this.arg2 = arg2;
-    }
-
-    public String getFirstString() {
-        return firstString;
-    }
-
-    public void setFirstString(String firstString) {
-        this.firstString = firstString;
+    public void setSecondName(int secondName) {
+        this.secondName = secondName;
     }
 }

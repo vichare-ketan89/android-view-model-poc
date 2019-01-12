@@ -16,16 +16,15 @@ import androidx.lifecycle.MutableLiveData;
 public class FirstViewModel extends AndroidViewModel implements IModelCallback{
 
     private MutableLiveData<DataModel> mutableLiveDataModel = new MutableLiveData<>();
-    private FeatureModel featureModel = new FeatureModel();
+    private FeatureModel featureModel;
 
     public FirstViewModel(Application application){
         super(application);
+        featureModel = new FeatureModel(application);
     }
 
     @Override
-    public void notifyCountChange(int count) {
-        DataModel dataModel = new DataModel();
-        dataModel.setArg1(count);
+    public void notifyCountChange(DataModel dataModel) {
         mutableLiveDataModel.setValue(dataModel);
     }
 
